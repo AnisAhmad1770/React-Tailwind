@@ -1,6 +1,11 @@
-
+import { useState } from "react"
+import {AiOutlineClose, AiOutlineMenu} from "react-icons/ai"
 
 const Header = () => {
+    const [toggle,setToggle]=useState(false);
+
+
+
   return (
     
        <div className='bg-[#2699fb] p-4'>
@@ -8,7 +13,15 @@ const Header = () => {
         <div>
             Liverpool Football
         </div>
-        <ul className='flex text-white gap-5'>
+        {
+            !toggle ? 
+            <AiOutlineMenu onClick={()=> setToggle(!toggle)} className='text-white  text-2xl md:hidden block' />
+            :
+            <AiOutlineClose onClick={()=> setToggle(!toggle)} className='text-white  text-2xl md:hidden block '/>
+        }
+        
+        
+        <ul className='hidden md:flex text-white gap-5'>
             <li>
                 Home
                 </li>
@@ -22,6 +35,26 @@ const Header = () => {
                 About
                 </li>
             <li>
+                Contact
+                </li>
+        </ul>
+      {/* {repkjh design} */}
+        <ul className= {` duration-300 md:hidden w-full h-screen text-white fixed bg-black top-[92px] 
+        ${ toggle ? 'left-0':'left-[100%]'}
+        `}>
+            <li className='p-4'>
+                Home
+                </li>
+            <li className='p-4'>
+                Company
+                </li>
+            <li className='p-4'>
+                Resources
+                </li>
+            <li className='p-4'>
+                About
+                </li>
+            <li className='p-4'>
                 Contact
                 </li>
         </ul>
