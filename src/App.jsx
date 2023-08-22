@@ -1,3 +1,4 @@
+import Analytics from "./components/Analytics";
 import Banner from "./components/Banner";
 import Header from "./components/Header";
 
@@ -7,6 +8,7 @@ function App() {
    <>
    <Header/>
    <Banner/>
+   <Analytics/>
   </>
   );
 }
