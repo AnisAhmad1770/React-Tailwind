@@ -10,7 +10,7 @@ const Header = () => {
     
        <div className='bg-[#2699fb] p-4'>
     <div className='max-w-[1240px] py-[15px] mt-[20px] items-center  mx-auto flex justify-between'>
-        <div>
+        <div className="font-bold text-2xl">
             Liverpool Football
         </div>
         {
